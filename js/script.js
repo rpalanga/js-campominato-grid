@@ -14,15 +14,36 @@
 
 const gridElement = document.querySelector(`#griglia`)
 
-for (let i = 1; i < 100; i++){
+for (let i = 1; i <= 100; i++){
 
     const newElement = document.createElement("div")
     newElement.classList.add("square")
     console.log(newElement)
+    newElement.innerHTML = i;
+
+    newElement.addEventListener("click", function (){
+        
+        this.classList.toggle("action")
+
+
+
+    })
+
+
+
+
 
 
     gridElement.append(newElement)
 }
 
+// const serialNumber = Numbers ();
+
+// function Numbers() {
+//     for (i = 1; i < 100; i++){
+
+//         con)
+//     }
+// }
 
 

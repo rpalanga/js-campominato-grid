@@ -20,9 +20,15 @@
     background-color: #193A4A ;
 }
 
+
+
 .square{
-    height: 60px;
-    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70px;
+    width: 70px;
 
     border: 1px solid black;
 
@@ -32,7 +38,7 @@
 }
 
 .my-container{
-    width: calc(700px - 1px);
+    width: 700px ;
     
     
 
@@ -46,4 +52,13 @@
     flex-wrap: wrap;
 
     justify-content: center;
+}
+
+.action{
+    background-color: #62D3A4;
+}
+
+#under{
+    color: blue;
+    text-decoration: underline;
 }
