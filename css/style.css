@@ -20,6 +20,12 @@
     background-color: #193A4A ;
 }
 
+#griglia{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
 
 
 .square{
@@ -27,8 +33,8 @@
     justify-content: center;
     align-items: center;
 
-    height: 70px;
-    width: 70px;
+    /* height: calc(700px / 10);
+    width: calc(700px / 10); */
 
     border: 1px solid black;
 
@@ -37,22 +43,40 @@
 
 }
 
+#griglia.easy .square{
+    height: calc(700px / 10);
+    width: calc(700px / 10);
+
+}
+
+#griglia.medium .square {
+
+    height: calc(700px / 9);
+    width: calc(700px / 9);
+}
+
+#griglia.difficult .square {
+    height: calc(700px / 7);
+    width: calc(700px / 7);
+}
+
+
+
 .my-container{
     width: 700px ;
+    
+    
     
     
 
     padding-top: 70px;
     padding-bottom: 70px;
     margin: 0 auto;
+
+    
 }
 
-#griglia{
-    display: flex;
-    flex-wrap: wrap;
 
-    justify-content: center;
-}
 
 .action{
     background-color: #62D3A4;

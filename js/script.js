@@ -11,15 +11,48 @@
 
 // Potete realizzare lo stile che volete, sin quando tutto è leggibile con facilità :muscolo::carnagione-2:
 
+const playerButton = document.querySelector("#player");
 
-const gridElement = document.querySelector(`#griglia`)
+playerButton.addEventListener("click", function(){
+    const gridElement = document.querySelector(`#griglia`)
 
-for (let i = 1; i <= 100; i++){
+
+
+    let numberCell;
+
+    let levelGame = document.querySelector("#level")
+
+    if (levelGame.value == "easy" ) {
+        
+        numberCell = 100;
+
+    } else if (levelGame.value == "medium") {
+
+        numberCell = 81;
+    } else {
+
+        numberCell = 49;
+    }
+
+    gridElement.className = levelGame.value
+    gridElement.innerHTML = "";
+
+
+for (let i = 1; i <= numberCell; i++){
 
     const newElement = document.createElement("div")
     newElement.classList.add("square")
+
     console.log(newElement)
+
     newElement.innerHTML = i;
+
+
+   
+
+
+
+    
 
     newElement.addEventListener("click", function (){
         
@@ -36,6 +69,33 @@ for (let i = 1; i <= 100; i++){
 
     gridElement.append(newElement)
 }
+})
+
+
+// const gridElement = document.querySelector(`#griglia`)
+
+// for (let i = 1; i <= 100; i++){
+
+//     const newElement = document.createElement("div")
+//     newElement.classList.add("square")
+//     console.log(newElement)
+//     newElement.innerHTML = i;
+
+//     newElement.addEventListener("click", function (){
+        
+//         this.classList.toggle("action")
+
+
+
+//     })
+
+
+
+
+
+
+//     gridElement.append(newElement)
+// }
 
 // const serialNumber = Numbers ();
 
